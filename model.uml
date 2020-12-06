@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_UvXb0DcUEeuWtr_09MQpQA" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_UwAVADcUEeuWtr_09MQpQA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cIC5kDcUEeuWtr_09MQpQA" name="CLIENTE">
+    <generalization xmi:type="uml:Generalization" xmi:id="_tkHu4DcUEeuWtr_09MQpQA" general="_dD1MYDcUEeuWtr_09MQpQA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5GI4MDciEeuPK6ikws0N_w" name="id_cliente"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7HaC0DcWEeuWtr_09MQpQA" name="articulo" type="_V8uU4DcWEeuWtr_09MQpQA" association="_7HY0sDcWEeuWtr_09MQpQA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dc5-EDcrEeuPK6ikws0N_w" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dD1MYDcUEeuWtr_09MQpQA" name="USUARIO"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fB7QwDcUEeuWtr_09MQpQA" name="EMPLEADO" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_us3foDcUEeuWtr_09MQpQA" general="_dD1MYDcUEeuWtr_09MQpQA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6QS-MDciEeuPK6ikws0N_w" name="id_empleado"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hsVokDcUEeuWtr_09MQpQA" name="VENDEDOR"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ihg9EDcUEeuWtr_09MQpQA" name="GERENTE"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_V8uU4DcWEeuWtr_09MQpQA" name="ARTICULO">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ANHh8DcjEeuPK6ikws0N_w" name="id_articulo" visibility="public"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7HZbwjcWEeuWtr_09MQpQA" name="cliente" type="_cIC5kDcUEeuWtr_09MQpQA" association="_7HY0sDcWEeuWtr_09MQpQA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HWs6IDcrEeuPK6ikws0N_w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HW0O4DcrEeuPK6ikws0N_w" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_7HY0sDcWEeuWtr_09MQpQA" name="PEDIDO" visibility="public" memberEnd="_7HZbwjcWEeuWtr_09MQpQA _7HaC0DcWEeuWtr_09MQpQA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7HZbwDcWEeuWtr_09MQpQA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7HZbwTcWEeuWtr_09MQpQA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__FZE4DciEeuPK6ikws0N_w" name="id_pedido"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MiFJ8DcXEeuWtr_09MQpQA" name="CENTRO_COMERCIAL"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Pea_QDcXEeuWtr_09MQpQA" name="DEPARTAMENTO">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9BSfIDciEeuPK6ikws0N_w" name="id_dpto"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Rx42sDcXEeuWtr_09MQpQA" name="ALMACEN">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_J_NHEDcjEeuPK6ikws0N_w" name="id_almacen"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_o73NgDcYEeuWtr_09MQpQA" memberEnd="_o73NgzcYEeuWtr_09MQpQA _o730kjcYEeuWtr_09MQpQA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o73NgTcYEeuWtr_09MQpQA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o73NgjcYEeuWtr_09MQpQA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_o73NgzcYEeuWtr_09MQpQA" name="centro_comercial" type="_MiFJ8DcXEeuWtr_09MQpQA" association="_o73NgDcYEeuWtr_09MQpQA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_o730kjcYEeuWtr_09MQpQA" name="departamento" type="_Pea_QDcXEeuWtr_09MQpQA" aggregation="shared" association="_o73NgDcYEeuWtr_09MQpQA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wlzaYDcYEeuWtr_09MQpQA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NKB98DcbEeuWtr_09MQpQA" name="Se compone de" memberEnd="_NKClAjcbEeuWtr_09MQpQA _NKDMETcbEeuWtr_09MQpQA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NKClADcbEeuWtr_09MQpQA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NKClATcbEeuWtr_09MQpQA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NKClAjcbEeuWtr_09MQpQA" name="departamento" type="_Pea_QDcXEeuWtr_09MQpQA" association="_NKB98DcbEeuWtr_09MQpQA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NKDMETcbEeuWtr_09MQpQA" name="vendedor" type="_hsVokDcUEeuWtr_09MQpQA" aggregation="shared" association="_NKB98DcbEeuWtr_09MQpQA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YACeMDcbEeuWtr_09MQpQA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_p4PO0DcbEeuWtr_09MQpQA" name="WEB"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_q0ZVEDcbEeuWtr_09MQpQA" name="AGENTE">
+    <generalization xmi:type="uml:Generalization" xmi:id="_O3BAADciEeuPK6ikws0N_w" general="_dD1MYDcUEeuWtr_09MQpQA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_265vsDciEeuPK6ikws0N_w" name="id_agente"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1x_EADcbEeuWtr_09MQpQA" name="PUNTO_VENTA" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_DlDLQDccEeuWtr_09MQpQA" client="_UvXb0DcUEeuWtr_09MQpQA" supplier="_UvXb0DcUEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_ElCBkDccEeuWtr_09MQpQA" client="_Rx42sDcXEeuWtr_09MQpQA" supplier="_1x_EADcbEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_Gd7c4DccEeuWtr_09MQpQA" client="_q0ZVEDcbEeuWtr_09MQpQA" supplier="_1x_EADcbEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_osg-YDciEeuPK6ikws0N_w" name="Contiene" memberEnd="_oskBsDciEeuPK6ikws0N_w _oskBszciEeuPK6ikws0N_w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_osizkDciEeuPK6ikws0N_w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_osjaoDciEeuPK6ikws0N_w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_oskBsDciEeuPK6ikws0N_w" name="almacen" type="_Rx42sDcXEeuWtr_09MQpQA" association="_osg-YDciEeuPK6ikws0N_w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oskBsjciEeuPK6ikws0N_w" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_oskBszciEeuPK6ikws0N_w" name="articulo" type="_V8uU4DcWEeuWtr_09MQpQA" aggregation="shared" association="_osg-YDciEeuPK6ikws0N_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kTrcQDcqEeuPK6ikws0N_w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kTtRcDcqEeuPK6ikws0N_w" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_HDFsgDcpEeuPK6ikws0N_w" name="Formaliza" client="_p4PO0DcbEeuWtr_09MQpQA" supplier="_7HY0sDcWEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Nw2lADcpEeuPK6ikws0N_w" name="Formaliza" client="_q0ZVEDcbEeuWtr_09MQpQA" supplier="_7HY0sDcWEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yvi2oDcvEeuPK6ikws0N_w" name="Se compone de" memberEnd="_yvjdsjcvEeuPK6ikws0N_w _yvkEwDcvEeuPK6ikws0N_w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yvjdsDcvEeuPK6ikws0N_w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yvjdsTcvEeuPK6ikws0N_w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yvkEwDcvEeuPK6ikws0N_w" name="centro_comercial" type="_MiFJ8DcXEeuWtr_09MQpQA" association="_yvi2oDcvEeuPK6ikws0N_w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yvjdsjcvEeuPK6ikws0N_w" name="almacen" type="_Rx42sDcXEeuWtr_09MQpQA" aggregation="shared" association="_yvi2oDcvEeuPK6ikws0N_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yvjdszcvEeuPK6ikws0N_w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yvjdtDcvEeuPK6ikws0N_w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bqJZMDevEeuX4OoUBOPYMg" memberEnd="_bqLOYDevEeuX4OoUBOPYMg _bqNqoTevEeuX4OoUBOPYMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bqKnUDevEeuX4OoUBOPYMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bqKnUTevEeuX4OoUBOPYMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bqNqoTevEeuX4OoUBOPYMg" name="departamento" type="_Pea_QDcXEeuWtr_09MQpQA" association="_bqJZMDevEeuX4OoUBOPYMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bqLOYDevEeuX4OoUBOPYMg" name="gerente" type="_ihg9EDcUEeuWtr_09MQpQA" aggregation="shared" association="_bqJZMDevEeuX4OoUBOPYMg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bqNDkDevEeuX4OoUBOPYMg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bqNqoDevEeuX4OoUBOPYMg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ATw6EDezEeuX4OoUBOPYMg" name="Formaliza" client="_hsVokDcUEeuWtr_09MQpQA" supplier="_7HY0sDcWEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_5thPwDe7EeuX4OoUBOPYMg" client="_hsVokDcUEeuWtr_09MQpQA" supplier="_fB7QwDcUEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_67jwMDe7EeuX4OoUBOPYMg" client="_ihg9EDcUEeuWtr_09MQpQA" supplier="_fB7QwDcUEeuWtr_09MQpQA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OX3JIDfCEeuX4OoUBOPYMg" name="Compra a través de (¿¿¿Existe esta relación???)"/>
+</uml:Model>
